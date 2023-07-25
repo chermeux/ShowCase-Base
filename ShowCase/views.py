@@ -1,3 +1,11 @@
+"""
+Librairies
+"""
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    """
+    Index programm broadcast index.html file
+    """
+    return render(request, "ShowCase/index.html")

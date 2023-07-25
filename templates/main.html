@@ -1,0 +1,29 @@
+{% load static %}
+{% load thumbnail %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ShowCase-Base</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+
+  </head>
+  <body>
+    <header>
+      {% include 'base/navbar.html' %}
+      {% include 'base/banner.html' %}
+    </header>
+
+    <main>
+      {% block bodymainPage %}
+      {% endblock %}
+    </main>
+
+    <footer class="bg-dark text-center text-lg-start text-white">
+        {% include 'base/footer.html' %}
+    </footer>
+  </body>
+</html>
