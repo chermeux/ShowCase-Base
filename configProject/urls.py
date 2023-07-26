@@ -10,8 +10,8 @@ urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
     path('admin/', include('admin_honeypot.urls')),
     path('secureAdmSite/', admin.site.urls),
-    path('', include('ShowCase.urls')),
-    path('partners/', include('Partners.urls'))
+    path('', include('show_case.urls')),
+    path('partners/', include('partners.urls'))
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
