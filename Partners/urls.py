@@ -2,8 +2,8 @@
 Librairies
 """
 from django.urls import path
-from Partners.views import PartnersMain
+from Partners.views import v_parteners
 
 urlpatterns = [
-    path('', PartnersMain, name="PartnersHome"),
+    path('', v_parteners, name="PartnersHome"),
 ]
