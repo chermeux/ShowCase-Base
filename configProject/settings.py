@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'bootstrap5',
     'ShowCase',
+    'Partners',
 ]
 
 MIDDLEWARE = [
