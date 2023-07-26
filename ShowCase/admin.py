@@ -1,3 +1,2 @@
-from django.contrib import admin
-
+"""Librairies"""
 # Register your models here.
