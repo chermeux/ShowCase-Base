@@ -9,7 +9,7 @@ class ViewsTestCaseProductMain(TestCase):
     """
         Class for all tests about ProductMain (page to display partners...) in Product
     """
-    def v_basics(self):
+    def test_v_basics(self):
         """
         Test Product Page - Function ProductMain - status_code=200 and good template
         """

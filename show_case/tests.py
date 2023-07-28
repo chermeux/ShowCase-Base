@@ -9,7 +9,7 @@ class ViewsTestCaseIndex(TestCase):
     """
         Class for all tests about index in ShowCase
     """
-    def v_basics(self):
+    def test_v_basics(self):
         """
         Test Index Page - Function ShowCase - status_code=200 and good template
         """
