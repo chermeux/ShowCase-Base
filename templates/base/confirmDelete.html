@@ -1,0 +1,26 @@
+{% extends 'main.html'%}
+
+{% block bodymainPage %}
+    <form method="post" action="{% url UrlRemove Id %}">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            <div class="container">
+                <div class="card">
+                    <div class="card-header">
+                        Confirmation Suppression
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Supprimer ...........</h5>
+                        <p class="card-text">Voulez-vous réellement ...................</p>
+                        <div class="form-floating mb-3">
+                            <div class="row g-2">
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-danger" type="submit">Supprimer ..........</button>
+                        <a href="{% url UrlCancel %}" class="btn btn-outline-warning">Annuler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

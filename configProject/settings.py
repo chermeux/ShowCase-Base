@@ -28,7 +28,7 @@ DEBUG = True #ATTENTION lors de la production normalement faut changer ça
 
 ALLOWED_HOSTS = [] #ATTENTION lors de la production normalement faut changer ça
 
-INTERNAL_IPS = [
+INTERNAL_IPS = [ #ATTENTION lors de la production normalement faut changer ça
     "127.0.0.1",
 ]
 
@@ -86,7 +86,6 @@ WSGI_APPLICATION = 'configProject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -97,7 +96,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -116,7 +114,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
-
 LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
@@ -128,7 +125,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
@@ -136,10 +132,10 @@ STATICFILES_DIRS = [
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/upload/'
+#Upload file in other server with cloudinary storage for security
+MEDIA_URL = '/upload/'                                     #ATTENTION cacher ça sur github
 MEDIA_ROOT = os.path.join(BASE_DIR, "upload")
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dnevgmfcv',

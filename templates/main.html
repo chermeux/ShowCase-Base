@@ -3,12 +3,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
+
     <title>ShowCase-Base</title>
+
     {% load bootstrap5 %}
     {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% bootstrap_javascript %}
-
+    <script src="{% static 'js/main.js' %}"></script>
 
   </head>
   <body>
@@ -17,7 +21,7 @@
       {% include 'base/banner.html' %}
     </header>
 
-    <main>
+    <main class="container my-5">
       {% block bodymainPage %}
       {% endblock %}
     </main>
@@ -25,5 +29,8 @@
     <footer class="bg-dark text-center text-lg-start text-white">
         {% include 'base/footer.html' %}
     </footer>
+      <script>
+
+    </script>
   </body>
 </html>

@@ -1,5 +1,16 @@
 {% extends 'main.html'%}
 
 {% block bodymainPage %}
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <a class="" href="#">
+        <div class="grey card card-body shadow-sm">
+        </div>
+    </a>
+    {% for Partner in Partners %}
 
+          {% include 'Partners/cardPartner.html' %}
+
+    {% endfor %}
+
+</div>
 {% endblock %}
