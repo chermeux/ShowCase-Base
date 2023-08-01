@@ -1,9 +1,12 @@
 """
-Librairies
+Model Page about partners app
 """
+
+############################ Import, Librairies etc ##############################
 from django.core.validators import URLValidator
 from django.db import models
 
+############################ Models ##############################
 
 class Partner(models.Model):
     """

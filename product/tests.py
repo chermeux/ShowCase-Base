@@ -16,4 +16,4 @@ class ViewsTestCaseProductMain(TestCase):
         client = Client()
         response = client.get("/product/")
         self.assertEqual(response.status_code, 200)
-        assertTemplateUsed(response, "Product/ProductMain.html")
+        assertTemplateUsed(response, "Product/ProductsMain.html")

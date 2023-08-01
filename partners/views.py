@@ -1,7 +1,9 @@
 # pylint: disable=E1101
 """
-Librairies
+View Page about partners app
+CRUD organization and by Model
 """
+############################ Import, Librairies etc ##############################
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from partners.models import Partner

@@ -1,21 +1,21 @@
 """
-Forms - app partners - Rule : One Form for One Model
+Forms - app product - Rule : One Form for One Model
 """
 ############################ Import, Librairies etc ##############################
 from django.forms import ModelForm
-from partners.models import Partner
+from product.models import Product
 
 ############################ Forms ##############################
-class PartnerForm(ModelForm):
+class ProductForm(ModelForm):
     """
-    Form from The Partner DataBase
+    Form from The Product DataBase
     """
     class Meta:
         """
-        Form Definition for PartnerForm
+        Form Definition for ProductForm
         """
-        model = Partner
-        fields = ["name", "description", "webSite", "logo"]
+        model = Product
+        fields = ["title", "description", "category", "image"]
 
         def public_method_1(self):
             """
