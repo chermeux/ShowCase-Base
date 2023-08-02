@@ -9,7 +9,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from pytest_django.asserts import assertTemplateUsed
 from partners.models import Partner
-from .forms import PartnerForm
+from partners.forms import PartnerForm
 
 
 ############################ Tests Views about Partner ##############################

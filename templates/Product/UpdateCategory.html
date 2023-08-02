@@ -1,0 +1,23 @@
+{% extends 'main.html'%}
+
+{% block bodymainPage %}
+    <form method="post" action="{% url 'Category_u' form.instance.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="{{ form.name.id_for_label }}">Nom de la categorie :</label>
+                        <input type="text" class="form-control" id="{{ form.name.auto_id }}" name="{{ form.name.html_name }}" value="{{ form.name.value }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.description.id_for_label }}">Description :</label>
+                        <textarea class="form-control" id="{{ form.description.auto_id }}" name="{{ form.description.html_name }}" required>{{ form.description.value }}</textarea>
+                    </div>
+                        <a href="{% url 'Categories_r' %}" class="btn btn-sm btn-outline-warning">Annuler</a>
+                        <input type="submit" value="Submit" class="btn btn-sm btn-outline-success">
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
