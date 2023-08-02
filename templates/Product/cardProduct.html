@@ -1,0 +1,16 @@
+<div class="col">
+    <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{Product.image.url}}" alt=""/>
+        <div class="card-body">
+            <p class="card-text">{{Product.category}}</p>
+            <h3 class="card-text">{{Product.title}}</h3>
+            <p class="card-text">{{Product.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="{% url 'Product_u' Product.id %}" class="btn btn-sm btn-outline-warning">Modifier</a>
+                    <a href="{% url 'Product_d' Product.id %}" class="btn btn-sm btn-outline-danger">Supprimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

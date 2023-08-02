@@ -1,5 +1,16 @@
 {% extends 'main.html'%}
 
 {% block bodymainPage %}
-    <p>Page Produit</p>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <a class="" href="#">
+        <div class="grey card card-body shadow-sm">
+        </div>
+    </a>
+    {% for Product in Products %}
+
+          {% include 'Product/cardProduct.html' %}
+
+    {% endfor %}
+
+</div>
 {% endblock %}

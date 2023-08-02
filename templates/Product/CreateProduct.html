@@ -1,0 +1,33 @@
+{% extends 'main.html'%}
+
+{% block bodymainPage %}
+    <form method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="form-group">
+                        <img id="imagePreview" src="#" alt="Aperçu de l'image" style="display: none; max-width: 100%; max-height: 225px;">
+                        <label class="form-label" for="{{ form.image.id_for_label }}">Image du Produit :</label>
+                        <input type="file" class="form-control" id="{{ form.image.auto_id }}" name="{{ form.image.html_name }}" accept="image/*" onchange="previewImage(event)">
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.title.id_for_label }}">Nom du produit :</label>
+                        <input type="text" class="form-control" id="{{ form.title.auto_id }}" name="{{ form.title.html_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.category.id_for_label }}">Category du produit :</label>
+                        <input type="text" class="form-control" id="{{ form.category.auto_id }}" name="{{ form.category.html_name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.description.id_for_label }}">Description :</label>
+                        <textarea class="form-control" id="{{ form.description.auto_id }}" name="{{ form.description.html_name }}" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <input type="submit" value="Submit" class="btn btn-sm btn-outline-success">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}
